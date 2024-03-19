@@ -1,0 +1,21 @@
+.footer {
+  &__title {
+    @apply font-medium tracking-tighter text-8xl mb-2;
+  }
+
+  &__grid {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-20 md:gap-[15rem] mt-14;
+  }
+
+  &__about {
+    @apply flex justify-between gap-20;
+  }
+
+  &__form {
+    @apply w-full h-12 border-b-2 text-2xl placeholder:text-black placeholder:text-2xl placeholder:tracking-tighter pl-1;
+  }
+
+  &__legal {
+    @apply flex items-center justify-between tracking-tighter text-[1.1rem] mt-20 mb-4;
+  }
+}

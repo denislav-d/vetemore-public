@@ -1,0 +1,21 @@
+.featured {
+  &__title {
+    @apply text-end font-medium tracking-tighter text-8xl mb-2;
+  }
+
+  &__grid {
+    @apply grid md:grid-cols-2 gap-8;
+  }
+
+  &__image {
+    @apply hover:scale-[0.99] transition-all duration-300 cursor-pointer;
+  }
+
+  &__description {
+    @apply text-xl tracking-tight cursor-pointer max-w-fit;
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-2;
+  }
+}

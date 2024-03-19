@@ -1,0 +1,7 @@
+.hamburger-menu {
+  @apply h-screen w-screen top-0 absolute bg-white flex flex-col items-center gap-2 justify-center z-10;
+
+  &__button {
+    @apply fixed top-0 right-0 pt-8 pr-8 z-30;
+  }
+}

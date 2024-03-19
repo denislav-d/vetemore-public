@@ -1,0 +1,21 @@
+.product-list {
+  &__grid {
+    @apply mb-12 grid grid-cols-1 sm:mb-36 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12;
+  }
+
+  &__image {
+    @apply h-full w-full overflow-hidden object-cover aspect-square mix-blend-multiply hover:-translate-y-2 transition duration-300;
+  }
+
+  &__image-wrapper {
+    @apply flex flex-col cursor-pointer bg-[#F4F4F6] hover:bg-[#EEEEF0] px-4 py-2;
+  }
+
+  &__description-wrapper {
+    @apply flex flex-col justify-between h-16 cursor-pointer mt-4;
+  }
+
+  &__description {
+    @apply font-light tracking-tight opacity-[0.8];
+  }
+}

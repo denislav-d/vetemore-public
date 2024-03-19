@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home-page {
+  &__section {
+    @apply px-8 my-4;
+  }
+
+  &__section-title {
+    @apply text-3xl font-medium uppercase tracking-tight cursor-pointer max-w-fit;
+  }
+}

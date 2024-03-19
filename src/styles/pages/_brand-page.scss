@@ -1,0 +1,33 @@
+.brand-page {
+  &__section {
+    @apply px-8 mt-24 flex flex-col lg:flex-row gap-10 justify-between;
+  }
+
+  &__wrapper {
+    @apply flex flex-col lg:flex-row gap-10;
+  }
+
+  &__designer-image {
+    @apply sm:max-w-md object-cover;
+  }
+
+  &__information {
+    @apply flex flex-col gap-6 lg:max-w-xl;
+  }
+
+  &__logo {
+    @apply max-h-24 sm:max-w-sm object-fill;
+  }
+
+  &__quote {
+    @apply font-light text-xl italic;
+  }
+
+  &__description {
+    @apply text-justify font-light tracking-tight text-[1.1rem];
+  }
+
+  &__vetemore-logo {
+    @apply hidden md:block font-medium tracking-tighter text-8xl [writing-mode:vertical-lr];
+  }
+}
