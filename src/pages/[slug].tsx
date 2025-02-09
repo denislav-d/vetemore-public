@@ -10,14 +10,42 @@ import ProductList from "@/components/ProductList";
 import { useRouter } from "next/router";
 import { brands } from "@/data/brands";
 
-export default function BrandPage({ data }: any) {
+interface Product {
+  "Product Name": string;
+  Price: string;
+  "Product Type": string;
+  "Product Link": string;
+  "Product Image": string;
+}
+
+interface Brand {
+  name: string;
+  slug: string;
+  image: string;
+  logo: string;
+  quote: string;
+  description: string;
+}
+
+interface BrandPageProps {
+  data: Product[];
+}
+
+export default function BrandPage({ data }: BrandPageProps) {
   const router = useRouter();
   const { slug } = router.query;
 
-  const brandData = brands.find((brand) => brand.slug === slug) || {};
+  const brandData: Brand = brands.find((brand) => brand.slug === slug) || {
+    name: "",
+    slug: "",
+    image: "",
+    logo: "",
+    quote: "",
+    description: "",
+  };
 
-  const ProductsData = data.filter((product: any) =>
-    product["Product Name"].includes(`${brandData.name}`)
+  const ProductsData = data.filter((product: Product) =>
+    product["Product Name"].includes(brandData.name)
   );
 
   return (

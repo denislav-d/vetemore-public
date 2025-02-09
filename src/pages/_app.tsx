@@ -2,7 +2,21 @@ import type { AppProps } from "next/app";
 import { useState, useEffect } from "react";
 import Papa from "papaparse";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+interface Product {
+  "Product Name": string;
+  Price: string;
+  "Product Type": string;
+  "Product Link": string;
+  "Product Image": string;
+}
+
+interface CustomAppProps extends AppProps {
+  pageProps: {
+    data?: Product[];
+  };
+}
+
+export default function MyApp({ Component, pageProps }: CustomAppProps) {
   const [data, setData] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -13,10 +27,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         const csvText = await readCSVFile(csvPath);
         const parsedData = await parseCSVData(csvText);
 
-        // Convert 'Price' to a number for each item in the parsed data
-        const dataWithFormattedPrice = parsedData.map((item) => ({
+        const dataWithFormattedPrice = parsedData.map((item: Product) => ({
           ...item,
-          Price: parseFloat(item.Price).toFixed(2),
+          Price: Number(item.Price).toFixed(2),
         }));
 
         setData(dataWithFormattedPrice);
@@ -28,14 +41,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     fetchData();
   }, []);
   return <Component {...pageProps} data={data} />;
-}
-
-interface Product {
-  "Product Name": string;
-  Price: Number;
-  "Product Type": string;
-  "Product Link": string;
-  "Product Image": any;
 }
 
 async function readCSVFile(path: string): Promise<string> {
@@ -53,8 +58,8 @@ async function parseCSVData(csvText: string): Promise<Product[]> {
     Papa.parse(csvText, {
       header: true,
       skipEmptyLines: true,
-      complete: (result: any) => resolve(result.data as Product[]),
-      error: (error: any) => reject(error),
+      complete: (result: Papa.ParseResult<Product>) => resolve(result.data),
+      error: (error: Papa.ParseError) => reject(error),
     });
   });
 }
