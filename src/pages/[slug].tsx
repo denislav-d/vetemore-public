@@ -21,8 +21,8 @@ interface Product {
 interface Brand {
   name: string;
   slug: string;
-  image: string;
-  logo: string;
+  // image: string;
+  // logo: string;
   quote: string;
   description: string;
 }
@@ -38,8 +38,8 @@ export default function BrandPage({ data }: BrandPageProps) {
   const brandData: Brand = brands.find((brand) => brand.slug === slug) || {
     name: "",
     slug: "",
-    image: "",
-    logo: "",
+    // image: "",
+    // logo: "",
     quote: "",
     description: "",
   };
@@ -54,17 +54,17 @@ export default function BrandPage({ data }: BrandPageProps) {
 
       <section className="brand-page__section">
         <div className="brand-page__wrapper">
-          <Image
+          {/* <Image
             src={brandData.image}
             alt={brandData.name}
             className="brand-page__designer-image"
-          />
+          /> */}
           <div className="brand-page__information">
-            <Image
+            {/* <Image
               src={brandData.logo}
               alt="logo"
               className="brand-page__logo"
-            />
+            /> */}
             <h3 className="brand-page__quote">{brandData.quote}</h3>
             <p className="brand-page__description">{brandData.description}</p>
           </div>
