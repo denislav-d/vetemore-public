@@ -1,7 +1,7 @@
 import "@/app/globals.scss";
 import "@/styles/pages/_brand-page.scss";
 
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
 import NavBar from "@/components/NavBar";
