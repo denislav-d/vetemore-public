@@ -6,7 +6,7 @@ const workSans = Work_Sans({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "Vetemòre",
-  description: "More to fashion",
+  description: "Vetemòre - More to fashion",
 };
 
 export default function RootLayout({
