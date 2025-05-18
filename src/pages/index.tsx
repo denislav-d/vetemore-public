@@ -11,7 +11,7 @@ import HamburgerMenu from "@/components/HamburgerMenu";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
-function App({ data }: any) {
+export default function HomePage({ data }: any) {
   const newProductsData = data.slice(20, 24);
 
   const AmiParisData = data
@@ -64,12 +64,10 @@ function App({ data }: any) {
         <ProductList data={JacquemusData} />
       </section>
 
-      {!isMobile ? (
+      {!isMobile && (
         <section className="px-8 mb-36">
           <BrandsList />
         </section>
-      ) : (
-        ""
       )}
 
       <section className="home-page__section">
@@ -82,5 +80,3 @@ function App({ data }: any) {
     </main>
   );
 }
-
-export default App;
