@@ -55,11 +55,16 @@ async function readCSVFile(path: string): Promise<string> {
 
 async function parseCSVData(csvText: string): Promise<Product[]> {
   return new Promise((resolve, reject) => {
-    Papa.parse(csvText, {
+    Papa.parse<Product>(csvText, {
       header: true,
       skipEmptyLines: true,
-      complete: (result: Papa.ParseResult<Product>) => resolve(result.data),
-      error: (error: Papa.ParseError) => reject(error),
+      worker: false,
+      complete(results) {
+        resolve(results.data);
+      },
+      error(error: Error) {
+        reject(error);
+      },
     });
   });
 }
