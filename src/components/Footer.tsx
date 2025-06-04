@@ -49,7 +49,7 @@ export default function Footer() {
 function FooterItemList({ items, listTitle }: FooterItemProps) {
   return (
     <div className="tracking-tighter">
-      <h2 className="text-md opacity-[0.6]">{listTitle}</h2>
+      <h2 className="text-base opacity-60">{listTitle}</h2>
       <ul className="text-2xl mt-5">
         {items.map((item) => (
           <li key={item.id}>{item.title}</li>
@@ -62,7 +62,7 @@ function FooterItemList({ items, listTitle }: FooterItemProps) {
 function NewsletterForm() {
   return (
     <div className="tracking-tighter">
-      <h2 className="text-md opacity-[0.6]">Join our newsletter</h2>
+      <h2 className="text-base opacity-60">Join our newsletter</h2>
       <form className="mt-4">
         <input
           type="email"
