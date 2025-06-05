@@ -22,7 +22,7 @@ describe("NavBar Component", () => {
 });
 
 // Helper function to check if each navItem is rendered
-function checkNavItemSection(selector: any, items: any) {
+function checkNavItemSection(selector: string, items: string[]) {
   cy.get(selector)
     .should("exist")
     .find(".navbar__item")
