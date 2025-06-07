@@ -2,8 +2,20 @@ import "@/styles/components/_product-list.scss";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-export default function ProductList({ data }: any) {
-  const [productList, setProductList] = useState(data || []);
+interface Product {
+  Price: number;
+  "Product Name": string;
+  "Product Link": string;
+  "Product Image": string;
+  "Product Type": string;
+}
+
+interface ProductListProps {
+  data: Product[];
+}
+
+export default function ProductList({ data }: ProductListProps) {
+  const [productList, setProductList] = useState<Product[]>(data || []);
   const [selectedSortOption, setSelectedSortOption] = useState("default");
   const [selectedBrand, setSelectedBrand] = useState("All brands");
 
@@ -39,7 +51,9 @@ export default function ProductList({ data }: any) {
     setProductList(
       brand === "All brands"
         ? data
-        : data.filter((product: any) => product["Product Name"].includes(brand))
+        : data.filter((product: Product) =>
+            product["Product Name"].includes(brand)
+          )
     );
     setSelectedSortOption("default");
   };
@@ -86,7 +100,7 @@ export default function ProductList({ data }: any) {
       </section>
 
       <section className="product-list__grid">
-        {productList.map((product: any, index: number) => (
+        {productList.map((product: Product, index: number) => (
           <div className="flex flex-col" key={index}>
             <div className="product-list__image-wrapper">
               <a
