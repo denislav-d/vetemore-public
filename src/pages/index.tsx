@@ -11,18 +11,30 @@ import HamburgerMenu from "@/components/HamburgerMenu";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 
-export default function HomePage({ data }: any) {
+interface Product {
+  Price: number;
+  "Product Name": string;
+  "Product Link": string;
+  "Product Image": string;
+  "Product Type": string;
+}
+
+interface HomePageProps {
+  data: Product[];
+}
+
+export default function HomePage({ data }: HomePageProps) {
   const newProductsData = data.slice(20, 24);
 
   const AmiParisData = data
-    .filter((product: any) => product["Product Name"].includes("Ami Paris"))
+    .filter((product: Product) => product["Product Name"].includes("Ami Paris"))
     .slice(0, 4);
 
   const JacquemusData = data
-    .filter((product: any) => product["Product Name"].includes("Jacquemus"))
+    .filter((product: Product) => product["Product Name"].includes("Jacquemus"))
     .slice(0, 4);
 
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => {
