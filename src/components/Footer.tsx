@@ -33,7 +33,7 @@ interface FooterItemProps {
 export default function Footer() {
   return (
     <footer className="footer">
-      <h1 className="footer__title">Vetemòre</h1>
+      <h2 className="footer__title">Vetemòre</h2>
       <section className="footer__grid">
         <div className="footer__about">
           <FooterItemList items={footerAboutItems} listTitle="About" />

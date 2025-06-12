@@ -80,13 +80,13 @@ export default function BrandsList() {
   return (
     <section className="grid lg:grid-cols-3 gap-28 bg-[#F4F4F6]">
       <div className="lg:col-span-1 p-12 flex flex-col gap-10">
-        <h1
+        <h2
           className={`text-6xl tracking-tighter font-medium transition duration-300 ${
             hoveredId !== -1 ? "opacity-[0.3]" : "opacity-100"
           }`}
         >
           Featured Brands
-        </h1>
+        </h2>
         <div className="brands-list flex flex-col gap-1 text-3xl font-medium tracking-tighter">
           {brands.map((brand, idx) => (
             <a
