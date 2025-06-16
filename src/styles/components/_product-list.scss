@@ -4,7 +4,7 @@
   }
 
   &__image {
-    @apply h-full w-full overflow-hidden object-cover aspect-square mix-blend-multiply hover:-translate-y-2 transition duration-300;
+    @apply size-full overflow-hidden object-cover aspect-square mix-blend-multiply hover:-translate-y-2 transition duration-300;
   }
 
   &__image-wrapper {
