@@ -1,6 +1,7 @@
 import "@/styles/components/_product-list.scss";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Product {
   Price: number;
@@ -103,7 +104,7 @@ export default function ProductList({ data }: ProductListProps) {
         {productList.map((product: Product, index: number) => (
           <div className="flex flex-col" key={index}>
             <div className="product-list__image-wrapper">
-              <a
+              <Link
                 className="outline-none select-none"
                 href={product["Product Link"]}
               >
@@ -114,9 +115,9 @@ export default function ProductList({ data }: ProductListProps) {
                   width={500}
                   height={500}
                 />
-              </a>
+              </Link>
             </div>
-            <a
+            <Link
               className="product-list__description-wrapper"
               href={product["Product Link"]}
             >
@@ -131,7 +132,7 @@ export default function ProductList({ data }: ProductListProps) {
                   €{product.Price}
                 </span>
               </div>
-            </a>
+            </Link>
           </div>
         ))}
       </section>
