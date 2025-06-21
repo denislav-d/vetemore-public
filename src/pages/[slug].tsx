@@ -12,7 +12,7 @@ import { brands } from "@/data/brands";
 
 interface Product {
   "Product Name": string;
-  Price: string;
+  Price: number;
   "Product Type": string;
   "Product Link": string;
   "Product Image": string;
