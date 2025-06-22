@@ -121,7 +121,7 @@ export default function ProductList({ data }: ProductListProps) {
               className="product-list__description-wrapper"
               href={product["Product Link"]}
             >
-              <span className="font-normal text-sm tracking-tight opacity-[0.6]">
+              <span className="font-normal text-sm tracking-tight opacity-60">
                 {product["Product Type"]}
               </span>
               <div className="flex items-center justify-between">

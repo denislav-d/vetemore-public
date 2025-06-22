@@ -82,7 +82,7 @@ export default function BrandsList() {
       <div className="lg:col-span-1 p-12 flex flex-col gap-10">
         <h2
           className={`text-6xl tracking-tighter font-medium transition duration-300 ${
-            hoveredId !== -1 ? "opacity-[0.3]" : "opacity-100"
+            hoveredId !== -1 ? "opacity-30" : "opacity-100"
           }`}
         >
           Featured Brands
@@ -94,7 +94,7 @@ export default function BrandsList() {
               className={`transition duration-300 cursor-pointer w-fit ${
                 hoveredId === -1 || hoveredId === idx
                   ? "opacity-100"
-                  : "opacity-[0.3]"
+                  : "opacity-30"
               }`}
               onMouseEnter={() => setHoveredId(idx)}
               onMouseLeave={() => setHoveredId(-1)}

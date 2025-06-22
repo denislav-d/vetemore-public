@@ -55,7 +55,7 @@ export default function HamburgerMenu() {
             {navItems.map((item) => (
               <a
                 key={item.id}
-                className="cursor-pointer text-5xl font-medium tracking-tight opacity-[0.6] hover:opacity-100 transition-all duration-300"
+                className="cursor-pointer text-5xl font-medium tracking-tight opacity-60 hover:opacity-100 transition-all duration-300"
               >
                 {item.title}
               </a>
@@ -64,7 +64,7 @@ export default function HamburgerMenu() {
             {navEssentials.map((item) => (
               <a
                 key={item.id}
-                className="cursor-pointer text-5xl font-medium tracking-tight opacity-[0.6] hover:opacity-100 transition-all duration-300"
+                className="cursor-pointer text-5xl font-medium tracking-tight opacity-60 hover:opacity-100 transition-all duration-300"
               >
                 {item.title}
               </a>
