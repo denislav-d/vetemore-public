@@ -8,7 +8,25 @@
 // import jacquemus_image from "";
 // import amiparis_image from "";
 
-export const brands = [
+// Additional brand imports from BrandsList
+// import margiela_logo from "";
+// import raf_logo from "";
+// import vetements_logo from "";
+// import givenchy_logo from "";
+// import alyx_logo from "";
+// import balenciaga_logo from "";
+
+export interface Brand {
+  id?: number;
+  slug?: string;
+  name: string;
+  quote?: string;
+  description?: string;
+  // logo?: any;
+  // image?: any;
+}
+
+export const brands: Brand[] = [
   {
     slug: "rick-owens",
     name: "Rick Owens",
@@ -46,5 +64,65 @@ export const brands = [
     quote: "“Being accessible is my biggest success.”",
     description:
       "AMI Paris is a French fashion brand founded by Alexandre Mattiussi in 2011. The brand is celebrated for its casual yet refined approach to menswear, offering a contemporary and accessible take on French style. AMI, which means 'friend' in French, reflects the brand's ethos of creating clothing that feels like a friendly and familiar companion in one's wardrobe. AMI Paris designs are characterized by clean lines, understated elegance, and a focus on timeless staples. Alexandre Mattiussi often infuses a sense of Parisian cool into his collections, striking a balance between sophistication and ease. The brand's aesthetic embraces a modern and urban sensibility, with a keen attention to detail and quality craftsmanship. AMI Paris has gained popularity for its versatile and approachable pieces, making it a go-to choice for those who appreciate a laid-back yet polished style. The brand's commitment to creating well-crafted, everyday essentials has contributed to its success in the world of contemporary menswear.",
+  },
+];
+
+// Brands from BrandsList component (will be merged with main brands data)
+export const featuredBrands: Brand[] = [
+  {
+    id: 1,
+    name: "1017 ALYX 9SM",
+    // logo: alyx_logo,
+  },
+  {
+    id: 2,
+    name: "A-COLD-WALL*",
+    // logo: acw_logo,
+  },
+  {
+    id: 3,
+    name: "AlexanderMcQUEEN",
+    // logo: mcqueen_logo,
+    // image: mcqueen_image,
+    description:
+      "Alexander McQueen is a British luxury fashion house that captivates the fashion world with its daring and provocative designs. Founded by the iconic designer Lee Alexander McQueen in 1992, the brand is renowned for its avant-garde creations that seamlessly merge craftsmanship with innovation. McQueen's distinct aesthetic often incorporates dark romanticism, theatrical flair, and meticulous attention to detail. The brand has become synonymous with pushing boundaries and challenging traditional notions of beauty in fashion. Known for its dramatic runway shows and sculptural designs, Alexander McQueen continues to be a symbol of creativity and rebellion within the realm of high fashion, honoring the legacy of its visionary founder.",
+  },
+  {
+    id: 4,
+    name: "Balenciaga",
+    // logo: balenciaga_logo,
+  },
+  {
+    id: 5,
+    name: "Givenchy",
+    // logo: givenchy_logo,
+    // image: givenchy_image,
+    description:
+      "Givenchy is a renowned French luxury fashion house known for its sophisticated and avant-garde designs. Founded by Hubert de Givenchy in 1952, the brand has consistently epitomized elegance and refinement. Renowned for its haute couture, ready-to-wear collections, and iconic accessories, Givenchy seamlessly blends timeless style with modern innovation. The label is celebrated for its sharp tailoring, distinctive prints, and a commitment to creating pieces that exude an air of aristocratic glamour. Givenchy's legacy continues to influence the fashion landscape with its bold aesthetic and commitment to pushing the boundaries of contemporary luxury.",
+  },
+  {
+    id: 6,
+    name: "Jacquemus",
+    // logo: jacquemus_logo,
+  },
+  {
+    id: 7,
+    name: "Maison Margiela",
+    // logo: margiela_logo,
+  },
+  {
+    id: 8,
+    name: "Raf Simons",
+    // logo: raf_logo,
+  },
+  {
+    id: 9,
+    name: "Rick Owens",
+    // logo: rick_logo,
+  },
+  {
+    id: 10,
+    name: "Vetements",
+    // logo: vetements_logo,
   },
 ];
