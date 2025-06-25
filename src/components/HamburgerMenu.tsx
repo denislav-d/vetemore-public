@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { hamburgerNavItems, navEssentials } from "@/data/content";
 
 import "@/styles/components/_hamburger-menu.scss";
 
@@ -13,19 +14,6 @@ const pathVariants2 = {
   moving: { d: "M0 14.5L24 14.5" },
   closed: { d: "M0 14.5L24 14.5" },
 };
-
-const navItems = [
-  { id: 1, title: "Brands" },
-  { id: 2, title: "Designers" },
-  { id: 3, title: "Journal" },
-  { id: 4, title: "About" },
-];
-
-const navEssentials = [
-  { id: 1, title: "Login" },
-  { id: 2, title: "Search" },
-  { id: 3, title: "Cart" },
-];
 
 export default function HamburgerMenu() {
   const [animation, setAnimation] = useState("closed");
@@ -52,7 +40,7 @@ export default function HamburgerMenu() {
             }}
           >
             {/* TODO! Fix and optimise below this line! */}
-            {navItems.map((item) => (
+            {hamburgerNavItems.map((item) => (
               <a
                 key={item.id}
                 className="cursor-pointer text-5xl font-medium tracking-tight opacity-60 hover:opacity-100 transition-all duration-300"

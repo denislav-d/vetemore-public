@@ -1,6 +1,6 @@
 import "@/styles/components/_homepage-featured.scss";
 
-import Image from "next/image";
+// import Image from "next/image";
 
 // import givenchy_runway from "";
 // import margiela_store from "";

@@ -1,25 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { navItems, navEssentials, type NavItem } from "@/data/content";
 
 import "@/styles/components/_navbar.scss";
-
-const navItems: NavItem[] = [
-  { id: 1, title: "Brands" },
-  { id: 2, title: "Designers" },
-  { id: 3, title: "Wishlist" },
-  { id: 4, title: "About" },
-];
-
-const navEssentials: NavItem[] = [
-  { id: 1, title: "Login" },
-  { id: 2, title: "Search" },
-  { id: 3, title: "Cart" },
-];
-
-interface NavItem {
-  id: number;
-  title: string;
-}
 
 interface NavItemProps {
   items: NavItem[];

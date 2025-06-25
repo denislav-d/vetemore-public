@@ -1,29 +1,10 @@
 import "@/styles/components/_footer.scss";
-
-const footerAboutItems: FooterItem[] = [
-  { id: 1, title: "Brands" },
-  { id: 2, title: "Designers" },
-  { id: 3, title: "Wishlist" },
-  { id: 4, title: "About" },
-];
-
-const footerContactItems: FooterItem[] = [
-  { id: 1, title: "info@vetemore.com" },
-  { id: 2, title: "Instagram" },
-  { id: 3, title: "Pinterest" },
-];
-
-const footerLegalItems: FooterItem[] = [
-  { id: 1, title: "Terms & Conditions" },
-  { id: 2, title: "Privacy Policy" },
-  { id: 3, title: "Developed by Denislav" },
-  { id: 4, title: "Vetemòre 2023" },
-];
-
-interface FooterItem {
-  id: number;
-  title: string;
-}
+import {
+  footerAboutItems,
+  footerContactItems,
+  footerLegalItems,
+  type FooterItem,
+} from "@/data/content";
 
 interface FooterItemProps {
   items: FooterItem[];

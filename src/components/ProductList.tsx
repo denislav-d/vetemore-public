@@ -2,6 +2,7 @@ import "@/styles/components/_product-list.scss";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { sortOptions, filterBrands } from "@/data/content";
 
 interface Product {
   Price: number;
@@ -25,14 +26,6 @@ export default function ProductList({ data }: ProductListProps) {
       setProductList(data);
     }
   }, [data]);
-
-  const sortOptions = {
-    default: "Our Picks",
-    asc: "Low to high",
-    desc: "High to low",
-  };
-
-  const brands = ["All brands", "Rick Owens", "LOEWE", "Ami Paris"];
 
   const sortByPrice = (order: "asc" | "desc" | "default") => {
     if (order === "default") {
@@ -72,7 +65,7 @@ export default function ProductList({ data }: ProductListProps) {
             value={selectedBrand}
             onChange={(e) => filterByBrand(e.target.value)}
           >
-            {brands.map((brand) => (
+            {filterBrands.map((brand) => (
               <option key={brand} value={brand}>
                 {brand}
               </option>
