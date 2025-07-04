@@ -8,7 +8,7 @@ import NavBar from "@/components/NavBar";
 import ProductList from "@/components/ProductList";
 
 import { useRouter } from "next/router";
-import { brands } from "@/data/brands";
+import { brands, Brand } from "@/data/brands";
 
 interface Product {
   "Product Name": string;
@@ -16,15 +16,6 @@ interface Product {
   "Product Type": string;
   "Product Link": string;
   "Product Image": string;
-}
-
-interface Brand {
-  name: string;
-  slug: string;
-  // image: string;
-  // logo: string;
-  quote: string;
-  description: string;
 }
 
 interface BrandPageProps {
@@ -38,8 +29,6 @@ export default function BrandPage({ data }: BrandPageProps) {
   const brandData: Brand = brands.find((brand) => brand.slug === slug) || {
     name: "",
     slug: "",
-    // image: "",
-    // logo: "",
     quote: "",
     description: "",
   };
