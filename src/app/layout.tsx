@@ -1,6 +1,6 @@
 import "./globals.scss";
 import type { Metadata } from "next";
-import { Work_Sans } from "@next/font/google";
+import { Work_Sans } from "next/font/google";
 
 const workSans = Work_Sans({ subsets: ["latin"], display: "swap" });
 
