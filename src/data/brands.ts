@@ -1,29 +1,9 @@
-// import rick_logo from "";
-// import mcqueen_logo from "";
-// import jacquemus_logo from "";
-// import amiparis_logo from "";
-
-// import rickowens_image from "";
-// import mcqueen_image from "";
-// import jacquemus_image from "";
-// import amiparis_image from "";
-
-// Additional brand imports from BrandsList
-// import margiela_logo from "";
-// import raf_logo from "";
-// import vetements_logo from "";
-// import givenchy_logo from "";
-// import alyx_logo from "";
-// import balenciaga_logo from "";
-
 export interface Brand {
   id?: number;
   slug?: string;
   name: string;
   quote?: string;
   description?: string;
-  // logo?: any;
-  // image?: any;
 }
 
 export const brands: Brand[] = [
