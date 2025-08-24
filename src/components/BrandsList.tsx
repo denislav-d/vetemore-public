@@ -2,20 +2,6 @@ import { useState } from "react";
 import { featuredBrands } from "@/data/brands";
 // import Image from "next/image";
 
-// import margiela_logo from "";
-// import raf_logo from "";
-// import vetements_logo from "";
-// import givenchy_logo from "";
-// import alyx_logo from "";
-// import balenciaga_logo from "";
-// import jacquemus_logo from "";
-// import rick_logo from "";
-// import acw_logo from "";
-// import mcqueen_logo from "";
-
-// import mcqueen_image from "";
-// import givenchy_image from "";
-
 export default function BrandsList() {
   const [hoveredId, setHoveredId] = useState(-1);
 
