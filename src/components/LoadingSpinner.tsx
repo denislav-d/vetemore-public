@@ -17,7 +17,7 @@ export default function LoadingSpinner({
     <div className="flex flex-col items-center justify-center gap-4 py-8">
       <div className={`${sizeClasses[size]} animate-spin`}>
         <svg
-          className="w-full h-full text-gray-400"
+          className="size-full text-gray-400"
           fill="none"
           viewBox="0 0 24 24"
         >
